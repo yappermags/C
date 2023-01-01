@@ -3,7 +3,7 @@
 /* Converts decimal number to octal bit (useful up to 32,768) */
 long dto(int d) {
     float x, y, m;
-    int ce = 0;
+    int ii, ce;
     long c = 12, i = 2, k = 1;
     x = floor(d / 8);
     int r[8];
@@ -30,6 +30,9 @@ long dto(int d) {
     printf("%d\n",d);
     if (d >= 512) {
         ce = (x >= 64) ? ((int) x / 64) * 2000 : 0;
+        // for (ii = 0; d < pow(8,ii); ii++) {
+
+        // }
         return (d + 2 * x + m + y) + 200 * ((int) x / 8) + ce;
     } else {
         return d + 2 * x + m + y;
