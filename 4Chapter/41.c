@@ -70,7 +70,7 @@ int main() {
         if (c == spaces[d]) {
             stack[d] = atof(buf);
             replace(buf,'0',0,c);
-            d++;
+            d++, c++;
         } else {
             buf[c] = numbers[b];
             b++, c++;
